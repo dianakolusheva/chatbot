@@ -1,0 +1,5 @@
+Name,Elements,Question
+cities,"Boston, NYC, Paris",What city would you like to visit?
+attractions,"Fenway, ballet",What attractions would you like to see?
+fenway_ticket,"front, back",What ticket for Fenway game would you like?
+ballet_ticket,"front, back",What ballet ticket would you like?
