@@ -10,6 +10,7 @@ def parse(string):
     return [str(n) for n in doc.noun_chunks]
 
 def read_file(file):
+    """Read csv file into text"""
     text = []
     with open(file, newline='') as f:
         reader = csv.reader(f)
@@ -17,13 +18,16 @@ def read_file(file):
         for row in reader:
             text.append(row)
     return text
- 
-elem_lines = read_file('guide_elements.csv')
-item_lines = read_file('guide_items.csv')
-chatbot_lines = read_file('guide_chatbot.csv')
 
+# read csv files 
+elem_lines = read_file('recruit_elements.csv')
+item_lines = read_file('recruit_items.csv')
+chatbot_lines = read_file('recruit_chatbot.csv')
+
+# create dataloader instance to help connect chatbot, items, and elements
 dataloader = DataLoader()
 
+# create a chatbot
 for line in elem_lines:
     dataloader.make_element(line[0])
 for line in item_lines:
@@ -34,14 +38,18 @@ for line in elem_lines:
 line = chatbot_lines[0]
 mychatbot =dataloader.make_bot(line[0], [x.strip() for x in line[1].split(',')])
 
-
+# create conversation
 mychatbot.greet()
+# while there are items to discuss/questions to ask:
 while True:
+    # ask question
     question = mychatbot.ask_question()
-    if question == '':
+    if question == '': # if all items were discussed
         print("I don't have any other questions. Thanks for chatting. Good-bye.")
         break
+    # take input from a user
     response = input(question)
+    # parse and process input
     noun_phrases = parse(response)
     mychatbot.process_input(noun_phrases)
 

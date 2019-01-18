@@ -4,6 +4,7 @@ from chatbot import Chatbot
 
 class DataLoader():
     def __init__(self):
+        """Use data from csv files to create instances of Chatbot, items and elements"""
         self.elems = {}
         self.items = {}
 
@@ -15,6 +16,7 @@ class DataLoader():
         self.items[name] = Item(name, elements, question)
 
     def set_followups(self, elem_name, item_name):
+        """Set follow-up items to corresponding elements"""
         self.elems[elem_name].followup = self.items[item_name]
 
     def make_bot(self, name, item_names):

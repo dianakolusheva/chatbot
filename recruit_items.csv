@@ -1,0 +1,10 @@
+Name,Elements,Question
+role,"Software engineer, Data analyst, Designer",What position are you applying for?
+highest_degree,"Bachelor's Degree, Master's Degree, PhD",What's your highest level of education?
+school,"MIT, Harvard, Boston University",What school/university did you go to?
+major,"Computer Science, Business Administration, Graphic Design",What was your major?
+city,"Boston, NYC, Chicago",What city do you want to work in?
+programming_languages,"Python, Java, C++, JavaScript",What's your primary programming language?
+data_tools,"Tableau, Excel, PowerBI",What's your favorite data analysis tool?
+design_software,"Photoshop, InDesign, Illustrator",What design software do you use?
+skill_level,"beginner, intermediate level, advanced level, expert","What's your skill level? (beginner, intermediate level, advanced level, expert)"
