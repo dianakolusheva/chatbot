@@ -6,7 +6,7 @@ This program leverages Natural Language Programming framework spacy.io to build 
 
 ## Diagram 
 
-![diagram](https://user-images.githubusercontent.com/35860871/51362071-18857600-1aa0-11e9-8b90-37cf629c56e6.png)
+![diagram](https://user-images.githubusercontent.com/35860871/51368986-a2910700-1abf-11e9-807b-2551d9152fd9.png)
 
 ## Usage
 
